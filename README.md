@@ -32,4 +32,40 @@ CAMPING_FUN_FLASK_MOCK_CHALLENGE/
 ├── README.md
 ├── requirements.txt
 ```
-
+## Installation
+```bash
+git clone [repository-link]
+cd camping_fun_flask_mock_challenge
+```
+### Create and activate virtual environment
+```bash
+python3 -m venv env
+source env/bin/activate  # Linux / WSL
+```
+### Install dependencies
+```bash
+pip install -r server/requirements.txt
+```
+### Set Environment variables
+```bash
+$ export FLASK_APP=server/app.py
+$ export FLASK_ENV=development
+```
+## Database setup
+### Initialize migrations
+```bash
+cd server
+flask db init
+flask db migrate -m "initial migration"
+flask db upgrade head
+```
+### Seed database with fake data
+```bash
+flask seed
+```
+### Running the API
+```bash
+python server/app.py
+```
+## Author
+Ian Ngoru Njuguna
