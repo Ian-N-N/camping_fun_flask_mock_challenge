@@ -1,4 +1,3 @@
-# server/app.py
 import os
 from flask import Flask, request, jsonify, abort, make_response
 from flask_migrate import Migrate
