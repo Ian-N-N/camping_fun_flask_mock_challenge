@@ -1,5 +1,5 @@
-# ACCESS CAMPL FLASK API
-- This is a an API Backend for Access camp, designed to manage campers, activities and signups. It is built with **Flask**, **Flask-SQLAlchemy**, and **Flask-Migrate**, and follows the **MVC architecture**.
+# ACCESS CAMP FLASK API
+- This is a an API Backend for Access camp, designed to manage campers, activities and signups. It is built with **Flask**, **Flask-SQLAlchemy**, and **Flask-Migrate**, and follows the **MVC architecture**. I have also incorporated a simple home page to navigate to the endpoints easily
 
 ## Key API Features
 - List, create, and update campers  

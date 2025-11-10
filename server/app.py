@@ -187,6 +187,23 @@ def seed():
 
     db.session.commit()
     print("Database seeded with fake data!")
+# HOMEPAGE
+@app.route("/")
+def homepage():
+    return f"""
+    <h1>Welcome to the Camp API</h1>
+    <p>Use the links below to navigate the endpoints:</p>
+    <ul>
+        <li><a href="{url_for('get_campers')}">GET /campers</a></li>
+        <li><a href="{url_for('get_camper', id=1)}">GET /campers/&lt;id&gt;</a> (replace &lt;id&gt; with camper id)</li>
+        <li><a href="{url_for('create_camper')}">POST /campers</a> (use Postman for JSON request)</li>
+        <li><a href="{url_for('update_camper', id=1)}">PATCH /campers/&lt;id&gt;</a> (replace &lt;id&gt; with camper id)</li>
+        <li><a href="{url_for('get_activities')}">GET /activities</a></li>
+        <li><a href="{url_for('delete_activity', id=1)}">DELETE /activities/&lt;id&gt;</a> (replace &lt;id&gt; with activity id)</li>
+        <li><a href="{url_for('create_signup')}">POST /signups</a> (use Postman for JSON request)</li>
+    </ul>
+    """
+
 
 # RUN SERVER
 if __name__ == "__main__":
